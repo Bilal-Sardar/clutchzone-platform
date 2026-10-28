@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Barlow Condensed', sans-serif;
+    --font-body: 'Exo 2', sans-serif;
+    --font-tech: 'Rajdhani', sans-serif;
+    --gold: #F5A623;
+    --gold-dark: #D4891C;
+    --dark: #080B14;
+    --dark2: #0F1220;
+    --dark3: #161A2E;
+    --dark4: #1E2340;
+    --dark5: #252B47;
+    --border: rgba(245,166,35,0.18);
+    --border1: rgba(245,166,35,0.25);
+    --border2: rgba(255,255,255,0.06);
+    --text: #EEF0FF;
+    --text-dim: #7A84A8;
+    --green: #2ECC71;
+    --red: #E74C3C;
+    --blue: #4A9EFF;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--dark);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-tech {
+    font-family: var(--font-tech);
+  }
+}
+
+/* Custom glow and backdrop effects */
+.glow-gold {
+  box-shadow: 0 0 25px rgba(245, 166, 35, 0.25);
+}
+
+.glow-gold-sm {
+  box-shadow: 0 0 12px rgba(245, 166, 35, 0.2);
+}
+
+.text-gold-shadow {
+  text-shadow: 0 0 30px rgba(245, 166, 35, 0.35);
+}
+
+/* Free Fire Animations */
+@keyframes emberRise {
+  0% {
+    transform: translateY(100%) translateX(0px) scale(0.6);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(0%) translateX(15px) scale(1.1);
+    opacity: 0.7;
+  }
+  85% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-120%) translateX(-15px) scale(0.4);
+    opacity: 0;
+  }
+}
+
+@keyframes flameAura {
+  0%, 100% {
+    opacity: 0.18;
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    opacity: 0.32;
+    transform: scale(1.08) translateY(-4px);
+  }
+}
+
+@keyframes tacticalScan {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes zonePulse {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 0.45;
+  }
+  100% {
+    transform: scale(0.92);
+    opacity: 0.2;
+  }
+}
+
+@keyframes reticleRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-flame-aura {
+  animation: flameAura 4s ease-in-out infinite;
+}
+
+.animate-tactical-scan {
+  animation: tacticalScan 6s linear infinite;
+}
+
+.animate-zone-pulse {
+  animation: zonePulse 5s ease-in-out infinite;
+}
+
+.animate-reticle-slow {
+  animation: reticleRotate 25s linear infinite;
+}
+
+.ember-particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: emberRise ease-in-out infinite;
+}
+
+/* Glass panel */
+.glass-panel {
+  background: rgba(22, 26, 46, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(245, 166, 35, 0.14);
+}
+
+.glass-nav {
+  background: rgba(15, 18, 32, 0.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(245, 166, 35, 0.18);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080B14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E2340;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F5A623;
+}

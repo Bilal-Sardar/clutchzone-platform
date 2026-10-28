@@ -1,0 +1,6 @@
+{
+  "name": "ClutchZone - Free Fire Tournaments",
+  "description": "Pakistan's #1 Free Fire esports tournament platform. Compete, earn real cash per kill, and withdraw via JazzCash & EasyPaisa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
